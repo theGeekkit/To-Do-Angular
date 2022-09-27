@@ -7,19 +7,17 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HeaderComponent } from './header/header.component';
 
 import { MatToolbarModule } from '@angular/material/toolbar';
-import { TaskComponent } from './Tasks/task/task.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
-    TaskComponent,
 
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
-     MatToolbarModule
+    MatToolbarModule
   ],
   providers: [],
   bootstrap: [AppComponent]

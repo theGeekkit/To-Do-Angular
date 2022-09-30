@@ -1,0 +1,6 @@
+<mat-grid-list cols="5" rowHeight="300px">
+  <mat-grid-tile *ngFor="let task of tasks">
+    <app-task-form [task]="Task"></app-task-form>
+  </mat-grid-tile>
+
+</mat-grid-list>

@@ -6,7 +6,7 @@ import { Component, OnInit, EventEmitter, Output } from '@angular/core';
   styleUrls: ['./task-element.component.css']
 })
 export class TaskElementComponent implements OnInit {
-  @Output taskCreated = new EventEmitter<{taskName: string, taskContent: string}>();
+  @Output () taskCreated = new EventEmitter<{taskName: string, taskContent: string}>();
   newTaskName = '' ;
   newTaskContent = '' ;
 

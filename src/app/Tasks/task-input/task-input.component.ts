@@ -16,6 +16,7 @@ export class TaskInputComponent implements OnInit {
       }
 addInput() {
  this.inputService.tasks.push({task: this.taskInput});
+ this.taskInput = "";
 
 
 }

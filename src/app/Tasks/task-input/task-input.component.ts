@@ -8,7 +8,7 @@ import { InputService } from 'src/app/input.service';
   styleUrls: ['./task-input.component.css']
 })
 export class TaskInputComponent implements OnInit {
-
+  taskStatus = []
   taskInput = ""
   constructor(private inputService:InputService) { }
 
@@ -17,6 +17,7 @@ export class TaskInputComponent implements OnInit {
 addInput() {
  this.inputService.tasks.push({task: this.taskInput});
  this.taskInput = "";
+
 
 
 }

@@ -9,10 +9,18 @@ import { InputService } from 'src/app/input.service';
 
 })
 export class TaskListComponent implements OnInit {
-
+  taskStatus: string = ""
   constructor(public inputService:InputService) { }
 
   ngOnInit(): void {
+
   }
 
+  strikethrough() {
+    this.taskStatus = "strikethrough"
+
+
+  }
 }
+
+

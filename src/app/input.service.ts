@@ -5,9 +5,7 @@ import { Task } from './Tasks/task';
   providedIn: 'root'
 })
 export class InputService {
-  tasks: Task[] = [ {
-    task: 'Mow',
-  }]
+  tasks: Task[] = [];
 
   constructor() { }
 }

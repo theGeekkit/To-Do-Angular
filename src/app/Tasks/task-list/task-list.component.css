@@ -1,0 +1,12 @@
+.strikethrough {
+    text-decoration: line-through;
+}
+div {
+  margin-top: 12px;
+  font-size: 25px;
+  margin-bottom: 12px;
+  margin-left: 6px;
+}
+button {
+  margin-left: 6px;
+}

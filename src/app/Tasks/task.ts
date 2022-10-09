@@ -3,7 +3,8 @@ export class Task {
 
 
   constructor(task: string) {
-    this.task = task
+    this.task = task;
+
 
   }
 

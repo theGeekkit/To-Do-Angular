@@ -1,7 +1,8 @@
-<div *ngFor="let item of inputService.tasks" (click)="(strikethrough)">
-  <div (click)="strikethrough()">
+<div *ngFor="let item of inputService.tasks" >
+  <div ngClass = "['taskStatus']" (click)="strikethrough()">
     {{ item.task }}
   </div>
 
   <button>delete</button>
 </div>
+

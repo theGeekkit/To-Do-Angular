@@ -8,17 +8,18 @@ import { InputService } from 'src/app/input.service';
   styleUrls: ['./task-input.component.css']
 })
 export class TaskInputComponent implements OnInit {
-  taskStatus = []
   taskInput = ""
   constructor(private inputService:InputService) { }
 
   ngOnInit(): void {
       }
 addInput() {
- this.inputService.tasks.push({task: this.taskInput});
+ this.inputService.tasks.push({task: this.taskInput, strikethrough:false});
  this.taskInput = "";
+ console.log(this.inputService.tasks)
 
 
 
 }
 }
+

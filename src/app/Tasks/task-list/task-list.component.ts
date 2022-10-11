@@ -9,15 +9,15 @@ import { InputService } from 'src/app/input.service';
 
 })
 export class TaskListComponent implements OnInit {
-  taskStatus: string = "strikethrough"
+
   constructor(public inputService:InputService) { }
 
   ngOnInit(): void {
 
   }
 
-  strikethrough() {
-    this.taskStatus = "strikethrough"
+  strikethrough(index:any) {
+   index.strikethrough = !index.strikethrough
 
 
   }

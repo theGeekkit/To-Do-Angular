@@ -6,6 +6,9 @@ import { Task } from './Tasks/task';
 })
 export class InputService {
   tasks: Task[] = [];
-
+  strikethrough:boolean=false;
   constructor() { }
 }
+
+// deleteTask(id:number){
+//   this.tasks = this.tasks.filter((v , i) => i !==id);

@@ -21,6 +21,10 @@ export class TaskListComponent implements OnInit {
 
 
   }
+  onDeleteTask(index) {
+    this.inputService.tasks.splice(index,1)
+
+  }
 }
 
 

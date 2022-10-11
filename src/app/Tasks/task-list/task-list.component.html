@@ -5,8 +5,10 @@
   <div
   [ngStyle]="{'text-decoration': item.strikethrough ? 'line-through' : 'none' }">
   {{item.task}}
+
   </div>
 
-  <button class="delete" >delete</button>
+<button class="remove" (click)= "onDeleteTask(item)"  >delete</button>
+
 </div>
 

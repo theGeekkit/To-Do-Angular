@@ -4,22 +4,19 @@
 div {
   margin-top: 12px;
   font-size: 25px;
-  margin-bottom: 12px;
+  margin-bottom: 5px;
   margin-left: 6px;
 }
 button {
-  margin-left: 6px;
+  margin-left: 8px;
+  height: 22px;
 }
-.taskCard {
+
+mat-card{
   display:flex;
+  min-width:25%;
+  max-width:50%;
+  margin:10px 0 0 0;
+  box-shadow: 25px;
 }
 
-.taskCard {
-
-  height: 20px;
-
-}
-.buttonContainer {
-    display: flex;
-  align-items: center;
-}

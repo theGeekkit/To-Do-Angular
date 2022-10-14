@@ -7,7 +7,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HeaderComponent } from './header/header.component';
 
 
-// import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatToolbarModule } from '@angular/material/toolbar';
 import { TaskListComponent } from './Tasks/task-list/task-list.component';
 import {MatCardModule} from '@angular/material/card';
 // import {MatGridListModule} from '@angular/material/grid-list';
@@ -23,7 +23,7 @@ import {MatCardModule} from '@angular/material/card';
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
-    // MatToolbarModule,
+    MatToolbarModule,
     FormsModule,
 
     MatCardModule,

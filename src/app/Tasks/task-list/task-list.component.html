@@ -1,4 +1,4 @@
-<div mat-card class="taskCard" *ngFor="let item of inputService.tasks;">
+<mat-card class="taskCard" *ngFor="let item of inputService.tasks;">
   <div
     [ngStyle]="{
       'text-decoration': item.strikethrough ? 'line-through' : 'none'
@@ -7,6 +7,6 @@
   >
     {{ item.task }}
   </div>
-  <div class="buttonContainer"></div>
+
   <button class="remove" (click)="onDeleteTask(item)">delete</button>
-</div>
+</mat-card>

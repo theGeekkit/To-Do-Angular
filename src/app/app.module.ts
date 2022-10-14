@@ -24,6 +24,7 @@ import { TaskListComponent } from './Tasks/task-list/task-list.component';
     BrowserAnimationsModule,
     // MatToolbarModule,
     FormsModule,
+
     // MatCardModule,
     // MatGridListModule,
   ],

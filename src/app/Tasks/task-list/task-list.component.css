@@ -13,3 +13,13 @@ button {
 .taskCard {
   display:flex;
 }
+
+.taskCard {
+
+  height: 20px;
+
+}
+.buttonContainer {
+    display: flex;
+  align-items: center;
+}

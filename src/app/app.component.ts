@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+// import { LocalService } from '/local.service';
 
 
 
@@ -11,6 +12,9 @@ export class AppComponent {
   taskElements = [];
   newTaskName = '';
 
+  // constructor(private localStore: LocalService) {
+
+  // }
 
   onTaskAdded() {
     this.taskElements.push({

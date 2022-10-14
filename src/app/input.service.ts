@@ -10,5 +10,4 @@ export class InputService {
   constructor() { }
 }
 
-// deleteTask(id:number){
-//   this.tasks = this.tasks.filter((v , i) => i !==id);
+

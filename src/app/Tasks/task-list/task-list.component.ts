@@ -22,7 +22,8 @@ export class TaskListComponent implements OnInit {
 
   }
   onDeleteTask(index) {
-    this.inputService.tasks.splice(index,1)
+    this.inputService.tasks =  this.inputService.tasks.filter(task => task !== index)
+    console.log(this.inputService.tasks)
 
   }
 }

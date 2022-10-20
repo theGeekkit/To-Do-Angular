@@ -7,9 +7,12 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HeaderComponent } from './header/header.component';
 
 
+import { RouterModule, Routes } from '@angular/router';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { TaskListComponent } from './Tasks/task-list/task-list.component';
-import {MatCardModule} from '@angular/material/card';
+import { MatCardModule } from '@angular/material/card';
+
+import { TodoFormComponent } from './todo-form/todo-form.component';
 // import {MatGridListModule} from '@angular/material/grid-list';
 
 
@@ -18,16 +21,16 @@ import {MatCardModule} from '@angular/material/card';
     AppComponent,
     HeaderComponent,
     TaskListComponent,
-    TaskInputComponent
+    TaskInputComponent,
+    TodoFormComponent
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
     MatToolbarModule,
     FormsModule,
-
     MatCardModule,
-    // MatGridListModule,
+    RouterModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -16,11 +16,32 @@ export class TodoFormComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    this.todoForm = new FormGroup({
-      'task': new FormControl(null),
-      'priority': new FormControl(null),
-      'deadline': new FormControl(null)
-    });
+
   }
 
+
+private initForm() {
+  let task = '';
+  let priority = '';
+  let deadline = '';
+
+
+ taskSubmit(){
+  this.task=
+ }
+
+
+  this.todoForm = new FormGroup({
+    'task': new FormControl(null),
+    'priority': new FormControl(null),
+    'deadline': new FormControl(null)
+  });
+
 }
+
+
+}
+
+
+
+

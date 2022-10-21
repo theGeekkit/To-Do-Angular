@@ -14,9 +14,9 @@ export class TaskInputComponent implements OnInit {
   ngOnInit(): void {
       }
 addInput() {
- this.inputService.tasks.push({task: this.taskInput, strikethrough:false});
- this.taskInput = "";
- console.log(this.inputService.tasks)
+//  this.inputService.tasks.push({task: this.taskInput, strikethrough:false});
+//  this.taskInput = "";
+//  console.log(this.inputService.tasks)
 
 
 

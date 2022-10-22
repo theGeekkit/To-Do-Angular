@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+
+
 // import { LocalService } from '/local.service';
 
 
@@ -11,6 +13,7 @@ import { Component } from '@angular/core';
 export class AppComponent {
   taskElements = [];
   newTaskName = '';
+
 
   // constructor(private localStore: LocalService) {
 

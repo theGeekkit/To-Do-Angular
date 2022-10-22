@@ -19,16 +19,16 @@ export class TodoFormComponent implements OnInit {
 
   }
 
+  onSubmit() {
+    console.log(this.todoForm);
+  }
+
 
 private initForm() {
   let task = '';
   let priority = '';
   let deadline = '';
 
-
- taskSubmit(){
-  this.task=
- }
 
 
   this.todoForm = new FormGroup({

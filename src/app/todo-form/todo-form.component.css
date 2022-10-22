@@ -22,7 +22,7 @@ label {
 }
 
 h2 {
-  color: aquamarine;
+  color: rgb(228, 102, 11);
   text-shadow: 4px 4px rgb(0, 0, 0);
   font-weight: bold;
   font-size: 75px;
@@ -36,6 +36,7 @@ h2 {
   position:relative;
   top:20%;
   left:20%;
+  max-width: 800px;
   margin-top: 20px;
   margin-bottom:50px;
   padding: 30px;

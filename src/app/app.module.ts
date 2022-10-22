@@ -1,11 +1,11 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { FormsModule } from '@angular/forms';
+
 import { TaskInputComponent } from './Tasks/task-input/task-input.component';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HeaderComponent } from './header/header.component';
-
+import { ReactiveFormsModule } from '@angular/forms';
 
 import { RouterModule, Routes } from '@angular/router';
 import { MatToolbarModule } from '@angular/material/toolbar';
@@ -29,7 +29,7 @@ import { TodoFormComponent } from './todo-form/todo-form.component';
     BrowserModule,
     BrowserAnimationsModule,
     MatToolbarModule,
-    FormsModule,
+    ReactiveFormsModule,
     MatCardModule,
     RouterModule,
     MatTableModule

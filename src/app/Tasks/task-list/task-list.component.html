@@ -6,9 +6,15 @@
     }"
     (click)="strikethrough(item)"
   >
-    {{ item.task }}
+    Priority:  {{ item.priority}} - {{ item.task}} by:  {{ item.deadline}}
   </div>
 
   <button class="remove" (click)="onDeleteTask(item)">delete</button>
 </mat-card>
 </div>
+
+
+
+
+
+

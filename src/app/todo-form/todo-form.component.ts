@@ -1,47 +1,27 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormControl} from '@angular/forms';
-
+import { FormGroup, FormControl } from '@angular/forms';
+import { InputService } from 'src/app/input.service';
 
 @Component({
   selector: 'app-todo-form',
   templateUrl: './todo-form.component.html',
-  styleUrls: ['./todo-form.component.css']
+  styleUrls: ['./todo-form.component.css'],
 })
-
-
-
-
 export class TodoFormComponent implements OnInit {
-    todoForm: FormGroup
-  constructor() { }
+  constructor(public inputService: InputService) {}
+
+  todoForm: FormGroup;
 
   ngOnInit(): void {
-
+    this.todoForm = new FormGroup({
+      task: new FormControl(null),
+      priority: new FormControl(null),
+      deadline: new FormControl(null),
+    });
   }
 
   onSubmit() {
-    console.log(this.todoForm);
+    this.inputService.tasks.push(this.todoForm.value);
+    this.todoForm.reset()
   }
-
-
-private initForm() {
-  let task = '';
-  let priority = '';
-  let deadline = '';
-
-
-
-  this.todoForm = new FormGroup({
-    'task': new FormControl(null),
-    'priority': new FormControl(null),
-    'deadline': new FormControl(null)
-  });
-
 }
-
-
-}
-
-
-
-

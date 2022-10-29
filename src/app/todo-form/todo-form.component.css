@@ -1,5 +1,6 @@
 div {
   margin-left: 8px;
+  margin-right: 10px;
   font-size: 20px;
 
 }
@@ -29,16 +30,20 @@ h2 {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   margin-bottom: 20px;
   height:75px;
-  text-align: center;
+  text-align: left;
+  margin-left: 45px;
 }
 .container {
   display: block;
-  position:relative;
+  position: center;
+  align-content: center;
   top:20%;
   left:20%;
+  right: 20%;
   margin-top: 20px;
   margin-bottom:50px;
   padding: 30px;
+  border-bottom-right-radius: 70px;
   background-color:#454955;
   border-radius:8px;
   border-top-left-radius:70px;

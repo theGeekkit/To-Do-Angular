@@ -1,11 +1,6 @@
 <div class="container">
 <mat-card class="taskCard" *ngFor="let item of inputService.tasks;">
-  <div
-    [ngStyle]="{
-      'text-decoration': item.strikethrough ? 'line-through' : 'none'
-    }"
-    (click)="strikethrough(item)"
-  >
+  <div>
     {{ item.task }}
   </div>
 

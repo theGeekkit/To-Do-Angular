@@ -1,9 +1,10 @@
-<div class="container">
+
+<div class="container" >
   <div class="title">
     <h2>To Do List</h2>
   </div>
  <div class="row">
-    <form>
+  <form (ngForm)='inputService.todoForm' (ngSubmit)="inputService.todoSubmit(inputService.todoForm.value)" >
        <div class="form-group">
        <label for="task">Task</label>
        <input type="text"
@@ -23,7 +24,9 @@
         type="text"
         id="deadline"
         class="form-control">
-        <button type="submit" id="todoFormSubmit">
-            Save
+        <button type="submit">save
         </button>
+      </div>
+  </form>
 </div>
+

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl} from '@angular/forms';
+import { InputService } from '../input.service';
 
 
 @Component({
@@ -11,37 +12,7 @@ import { FormGroup, FormControl} from '@angular/forms';
 
 
 
-export class TodoFormComponent implements OnInit {
-    todoForm: FormGroup
-  constructor() { }
+export class TodoFormComponent {
 
-  ngOnInit(): void {
-
-  }
-
-
-private initForm() {
-  let task = '';
-  let priority = '';
-  let deadline = '';
-
-
- taskSubmit(){
-  this.task=
- }
-
-
-  this.todoForm = new FormGroup({
-    'task': new FormControl(null),
-    'priority': new FormControl(null),
-    'deadline': new FormControl(null)
-  });
-
+  constructor(public inputService: InputService) { }
 }
-
-
-}
-
-
-
-

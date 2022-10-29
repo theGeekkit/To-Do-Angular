@@ -1,6 +1,12 @@
 /* You can add global styles to this file, and also import other style files */
 
 
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif;
-background-color: darkslategray;
+body {
+  margin: 0;
+  background-image: url("https://i.imgur.com/HjjyBPe.jpeg");
+}
+
+@font-face {
+  font-family: "proxima nova";
+  src: url(assets/fonts/Proxima\ Nova\ Bold.otf) format("opentype");
 }

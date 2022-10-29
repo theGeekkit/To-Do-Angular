@@ -1,6 +1,10 @@
 div {
+<<<<<<< HEAD
   margin-left: 8px;
   margin-right: 10px;
+=======
+  margin-left: 0px;
+>>>>>>> 3bb6bd2100151ecd72a0f84773f9caeb2b783da4
   font-size: 20px;
 
 }
@@ -10,24 +14,36 @@ button {
   height: 40px;
 }
 
+select {
+  margin-bottom: 4px;
+}
+
 input{
   height: 35px;
   width:450px;
   font-size: x-large;
+  margin-bottom: 8px;
+  padding-bottom: 8px;
+  margin-top: 4px;
+  margin-left: 0px;
 }
 
 label {
   font-size: 25px;
-  color: rgb(228, 102, 11);
-  text-shadow: 2px 2px rgb(63, 39, 3);
+  color: rgb(229, 245, 90);
+  text-shadow: 2px 2px rgb(97, 75, 24);
+  padding-right: 10px;
+  padding-left: 5px;
+  padding-bottom: 3px;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
 }
 
 h2 {
-  color: aquamarine;
-  text-shadow: 4px 4px rgb(0, 0, 0);
+  color: rgb(229, 245, 90);
+  text-shadow: 4px 4px rgb(97, 75, 24);
   font-weight: bold;
   font-size: 75px;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: 'proxima nova';
   margin-bottom: 20px;
   height:75px;
   text-align: left;
@@ -39,13 +55,23 @@ h2 {
   align-content: center;
   top:20%;
   left:20%;
+<<<<<<< HEAD
   right: 20%;
+=======
+  max-width: 800px;
+>>>>>>> 3bb6bd2100151ecd72a0f84773f9caeb2b783da4
   margin-top: 20px;
-  margin-bottom:50px;
+  margin-bottom: 0%;
   padding: 30px;
+<<<<<<< HEAD
   border-bottom-right-radius: 70px;
   background-color:#454955;
+=======
+  padding-bottom: 6px;
+  background-image: url("https://i.postimg.cc/5yxBVCjt/uwp1620279.jpg");
+>>>>>>> 3bb6bd2100151ecd72a0f84773f9caeb2b783da4
   border-radius:8px;
   border-top-left-radius:70px;
   box-shadow: 8px 8px 18px 0px rgb(77, 120, 247);
+  font-family: Roboto, "Helvetica Neue", sans-serif;
 }

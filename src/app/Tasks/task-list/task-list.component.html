@@ -1,9 +1,22 @@
+<<<<<<< HEAD
 <div class="container">
 <mat-card class="taskCard" *ngFor="let item of inputService.tasks;">
   <div>
     {{ item.task }}
   </div>
+=======
+<div class="container" id="taskListContainer" *ngIf='inputService.emptyList'>
+  <mat-card class="taskCard" *ngFor="let item of inputService.tasks">
+    <div
+      [ngStyle]="{
+        'text-decoration': item.strikethrough ? 'line-through' : 'none'
+      }"
+      (click)="strikethrough(item)"
+    >
+      Priority: {{ item.priority }} - {{ item.task }} by: {{ item.deadline }}
+    </div>
+>>>>>>> 3bb6bd2100151ecd72a0f84773f9caeb2b783da4
 
-  <button class="remove" (click)="onDeleteTask(item)">delete</button>
-</mat-card>
+    <button class="remove" (click)="onDeleteTask(item)">delete</button>
+  </mat-card>
 </div>

@@ -6,7 +6,4 @@ body {
   background-image: url("https://i.imgur.com/HjjyBPe.jpeg");
 }
 
-@font-face {
-  font-family: "proxima nova";
-  src: url(assets/fonts/Proxima\ Nova\ Bold.otf) format("opentype");
-}
+

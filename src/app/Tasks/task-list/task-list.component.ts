@@ -16,11 +16,11 @@ export class TaskListComponent implements OnInit {
 
   }
 
-  // strikethrough(index:any) {
-  //  index.strikethrough = !index.strikethrough
+  strikethrough(index:any) {
+   index.strikethrough = !index.strikethrough
 
 
-  // }
+  }
   onDeleteTask(index) {
     this.inputService.tasks =  this.inputService.tasks.filter(task => task !== index)
     console.log(this.inputService.tasks)

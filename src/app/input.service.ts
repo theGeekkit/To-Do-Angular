@@ -12,17 +12,19 @@ export class InputService implements OnInit{
 
   tasks: Task[] = [];
   strikethrough:boolean=false;
-  constructor() { }
-
-
-  todoForm: FormGroup;
-
-  ngOnInit(): void {
+  constructor() {
     this.todoForm = new FormGroup({
       task: new FormControl(null),
       priority: new FormControl(null),
       deadline: new FormControl(null)
     });
+  }
+
+
+  todoForm: FormGroup;
+
+  ngOnInit(): void {
+
   }
 
   onSubmit() {

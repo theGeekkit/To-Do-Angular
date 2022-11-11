@@ -15,7 +15,7 @@ button {
 mat-card{
   display:flex;
   min-width:25%;
-  max-width:50%;
+  max-width:75%;
   margin:10px 0 0 0;
   color: rgb(229, 245, 90);
   background-image: url("https://i.postimg.cc/5yxBVCjt/uwp1620279.jpg");

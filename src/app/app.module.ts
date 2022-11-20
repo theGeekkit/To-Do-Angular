@@ -12,7 +12,7 @@ import { MatCardModule } from '@angular/material/card';
 import { MatTableModule } from '@angular/material/table';
 import { TodoFormComponent } from './todo-form/todo-form.component';
 import { LoginComponent } from './login/login.component';
-
+import { AppRoutingModule } from'./app-routing.module';
 
 
 
@@ -31,7 +31,8 @@ import { LoginComponent } from './login/login.component';
     ReactiveFormsModule,
     MatCardModule,
     RouterModule,
-    MatTableModule
+    MatTableModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]

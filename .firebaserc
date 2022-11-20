@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "todolist-3a48b": {
+      "hosting": {
+        "To-Do-Angular": [
+          "todolist-3a48b"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "todolist-3a48b"
+  }
+}

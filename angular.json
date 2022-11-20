@@ -25,7 +25,6 @@
             "styles": [
               "src/custom-theme.scss",
               "src/styles.css"
-
             ],
             "scripts": []
           },
@@ -95,6 +94,16 @@
               "src/styles.css"
             ],
             "scripts": []
+          }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {
+            "prerender": false,
+            "ssr": false,
+            "browserTarget": "To-Do-Angular:build:production",
+            "firebaseProject": "todolist-3a48b",
+            "firebaseHostingSite": "todolist-3a48b"
           }
         }
       }

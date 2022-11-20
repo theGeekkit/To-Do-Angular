@@ -3,16 +3,19 @@ export class Task {
   deadline: string ;
   priority: string ;
   strikethrough: boolean;
+  id?:string;
 
 
   constructor(task: string,
               deadline: string,
-              priority: string)
+              priority: string,
+              id:string)
               {
     this.task = task;
     this.deadline = deadline
     this.priority = priority
     this.strikethrough= false;
+    this.id = id
 
 
   }

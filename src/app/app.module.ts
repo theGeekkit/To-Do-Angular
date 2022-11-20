@@ -13,6 +13,7 @@ import { MatTableModule } from '@angular/material/table';
 import { TodoFormComponent } from './todo-form/todo-form.component';
 import { LoginComponent } from './login/login.component';
 import { AppRoutingModule } from'./app-routing.module';
+import { HttpClientModule } from '@angular/common/http';
 
 
 
@@ -32,7 +33,8 @@ import { AppRoutingModule } from'./app-routing.module';
     MatCardModule,
     RouterModule,
     MatTableModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

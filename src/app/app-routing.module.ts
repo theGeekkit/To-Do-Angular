@@ -6,7 +6,7 @@ import { LoginComponent } from './login/login.component';
 
 const routes: Routes = [
   {path: 'todoForm', component:TodoFormComponent}
-  {path: 'login'}
+  {path: 'login', component:LoginComponent}
 ]
 
 

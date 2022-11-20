@@ -11,6 +11,7 @@ import { TaskListComponent } from './Tasks/task-list/task-list.component';
 import { MatCardModule } from '@angular/material/card';
 import { MatTableModule } from '@angular/material/table';
 import { TodoFormComponent } from './todo-form/todo-form.component';
+import { LoginComponent } from './login/login.component';
 
 
 
@@ -20,7 +21,8 @@ import { TodoFormComponent } from './todo-form/todo-form.component';
     AppComponent,
     TaskListComponent,
     TaskInputComponent,
-    TodoFormComponent
+    TodoFormComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,

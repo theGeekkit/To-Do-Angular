@@ -12,8 +12,8 @@ export class TaskListComponent implements OnInit {
 
   constructor(public inputService:InputService) { }
 
-  ngOnInit(): void {
-
+  ngOnInit() {
+    this.inputService.fetchTaskData()
   }
 
   strikethrough(index:any) {

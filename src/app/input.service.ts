@@ -16,10 +16,10 @@ export class InputService implements OnInit {
   tasks: Task[] = [];
   strikethrough: boolean = false;
   constructor(private http: HttpClient) {
-    this.fetchTasksData().subscribe(postData => {
-      this.tasks = postData;
-    this.todoForm.reset()
-    });
+    // this.fetchTasksData().subscribe(postData => {
+    //   this.tasks = postData;
+    // this.todoForm.reset()
+    // });
 
     this.todoForm = new FormGroup({
       task: new FormControl(null),
@@ -48,24 +48,44 @@ export class InputService implements OnInit {
       .subscribe();
   }
 
-  fetchTasksData(): Observable<Task[]> {
-    return this.http
-      .get('https://todolist-3a48b-default-rtdb.firebaseio.com/task.json')
+  fetchTaskData() {
+    this.http
+      .get<{ [key: string]:Task }>(
+        'https://todolist-3a48b-default-rtdb.firebaseio.com/task.json'
+      )
       .pipe(
-        map((data) => {
-          console.log(Object.keys(data));
-          return Object.keys(data).map((id) => {
-            const tasks = new Task(
-              data[id].task,
-              data[id].priority,
-              data[id].strikethrough,
-              data[id].deadline
-            )
-            tasks.id = id;
-            return tasks;
-          })
+        map((responseData) => {
+          const tasksArray = [];
+          for (const key in responseData) {
+              tasksArray.push({ ...responseData[key], id: key });
+            }
+            return tasksArray;
         })
       )
-       
+      .subscribe((tasksArray) => {
+        this.tasks = tasksArray;
+        this.todoForm.reset()
+      });
   }
+
+  // fetchTasksData(): Observable<Task[]> {
+  //   return this.http
+  //     .get('https://todolist-3a48b-default-rtdb.firebaseio.com/task.json')
+  //     .pipe(
+  //       map((data) => {
+  //         console.log(Object.keys(data));
+  //         return Object.keys(data).map((id) => {
+  //           const tasks = new Task(
+  //             data[id].task,
+  //             data[id].priority,
+  //             data[id].strikethrough,
+  //             data[id].deadline
+  //           )
+  //           tasks.id = id;
+  //           return tasks;
+  //         })
+  //       })
+  //     )
+
+  // }
 }

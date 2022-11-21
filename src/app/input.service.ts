@@ -36,7 +36,9 @@ export class InputService implements OnInit {
         'https://todolist-3a48b-default-rtdb.firebaseio.com/task.json',
         postData
       )
-      .subscribe();
+      .subscribe(() => {
+this.fetchTaskData()
+      });
   }
 
   fetchTaskData() {
@@ -63,9 +65,7 @@ export class InputService implements OnInit {
   onDeleteTask(id) {
     this.http
       .delete(
-        'https://todolist-3a48b-default-rtdb.firebaseio.com/task/' +
-          id +
-          '.json'
+        'https://todolist-3a48b-default-rtdb.firebaseio.com/task/' + id + '.json'
       )
       .subscribe(() => {
         this.fetchTaskData();

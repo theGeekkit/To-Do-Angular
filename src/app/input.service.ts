@@ -16,11 +16,6 @@ export class InputService implements OnInit {
   tasks: Task[] = [];
   strikethrough: boolean = false;
   constructor(private http: HttpClient) {
-    // this.fetchTasksData().subscribe(postData => {
-    //   this.tasks = postData;
-    // this.todoForm.reset()
-    // });
-
     this.todoForm = new FormGroup({
       task: new FormControl(null),
       priority: new FormControl(null),
@@ -31,10 +26,6 @@ export class InputService implements OnInit {
   ngOnInit(): void {}
 
   onSubmit() {
-    // this.tasks.push(this.todoForm.value);
-    // console.log(this.tasks)
-    // this.todoForm.reset()
-    // this.emptyList = true
     const task = this.todoForm.value.task;
     const priority = this.todoForm.value.priority;
     const deadline = this.todoForm.value.deadline;
@@ -50,42 +41,37 @@ export class InputService implements OnInit {
 
   fetchTaskData() {
     this.http
-      .get<{ [key: string]:Task }>(
+      .get<{ [key: string]: Task }>(
         'https://todolist-3a48b-default-rtdb.firebaseio.com/task.json'
       )
       .pipe(
         map((responseData) => {
           const tasksArray = [];
           for (const key in responseData) {
-              tasksArray.push({ ...responseData[key], id: key });
-            }
-            return tasksArray;
+            tasksArray.push({ ...responseData[key], id: key });
+          }
+          return tasksArray;
         })
       )
       .subscribe((tasksArray) => {
         this.tasks = tasksArray;
-        this.todoForm.reset()
+        console.log(this.tasks);
+        this.todoForm.reset();
       });
   }
 
-  // fetchTasksData(): Observable<Task[]> {
-  //   return this.http
-  //     .get('https://todolist-3a48b-default-rtdb.firebaseio.com/task.json')
-  //     .pipe(
-  //       map((data) => {
-  //         console.log(Object.keys(data));
-  //         return Object.keys(data).map((id) => {
-  //           const tasks = new Task(
-  //             data[id].task,
-  //             data[id].priority,
-  //             data[id].strikethrough,
-  //             data[id].deadline
-  //           )
-  //           tasks.id = id;
-  //           return tasks;
-  //         })
-  //       })
-  //     )
+  onDeleteTask(id) {
+    this.http
+      .delete(
+        'https://todolist-3a48b-default-rtdb.firebaseio.com/task/' +
+          id +
+          '.json'
+      )
+      .subscribe(() => {
+        this.fetchTaskData();
+      });
 
-  // }
+    // this.tasks =  this.tasks.filter(task => task !== index)
+    // console.log(this.tasks)
+  }
 }

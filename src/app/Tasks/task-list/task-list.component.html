@@ -1,4 +1,4 @@
-<div class="container" id="taskListContainer" *ngIf='inputService.emptyList'>
+<div class="container" id="taskListContainer" >
   <mat-card class="taskCard" *ngFor="let item of inputService.tasks">
     <div
       [ngStyle]="{
@@ -9,6 +9,6 @@
       Priority: {{ item.priority }}  -  {{ item.task }}    by:    {{ item.deadline }}
     </div>
 
-    <button class="remove" (click)="onDeleteTask(item)">delete</button>
+    <button class="remove" (click)="inputService.onDeleteTask(item.id)">delete</button>
   </mat-card>
 </div>
